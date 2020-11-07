@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link href="https://fonts.googleapis.com/css?family=Solway&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<style>
+	body{margin:5px; background-color:yellow; font-family: Luckiest Guy;}
+	
+	</style>
+	</head>
+	<body>
+	<center>
+	<form onsubmit= "return false">
+	<B><h1>Which avtaar goes to your name?</h1>
+	<input  type="radio" value="male"  name="gender"><label>Male</label><input  type="radio" value="female"  name="gender"><label>Female</label><br/>
+	<input class="w-50 "  type="text" placeholder="Enter Your Name" id="nameid"><br/><br/>
+	<img src="sun.jpg" width="400" height="400" class="imgchange"><br/><br/>
+	<button class="btn btn-success w-50">Click Me</button>
+	
+	
+	
+	</B></form>
+	</center>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+
+   $('button').click(function(){
+   
+     const name = $('#nameid').val();
+
+	 if(value=="male"){
+	 $('.imgchange').attr('src', 'https://joeschmoe.io/api/v1/male/random/${name}');} else {$('.imgchange').attr('src', 'https://joeschmoe.io/api/v1/female/random/${name}');}
+   
+   const b =  $('.imgchange');
+   console.log(b);
+   });
+
+});
+
+</script>
+	</body>
+</html>
